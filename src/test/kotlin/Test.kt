@@ -1,6 +1,6 @@
-import com.dreamuscompany.flo.ForeignRightHolderSummary
+import com.dreamuscompany.flo.model.ForeignRightHolderSummary
 import com.dreamuscompany.flo.MyCalculator
-import com.dreamuscompany.flo.StatementForeignSettlementCalculation
+import com.dreamuscompany.flo.model.StatementForeignSettlementCalculation
 import org.junit.jupiter.api.Test
 import java.math.BigDecimal
 import kotlin.test.assertEquals
@@ -11,9 +11,9 @@ class Test {
     fun test() {
 
         val input = input()
-        val actualResults = input.map {
+        val actualResults = input.map { summary: ForeignRightHolderSummary ->
             //FIXME
-            MyCalculator.calculate(it)
+            MyCalculator.calculate(summary)
         }.toList()
 
         actualResults.forEachIndexed { i, result ->
