@@ -17,7 +17,7 @@ class Test {
         }.toList()
 
         actualResults.forEachIndexed { i, result ->
-            println("ACTUAL   = ${result}")
+            println("ACTUAL   = $result")
             println("EXPECTED = ${expectedOutput()[i]}")
             assertEquals(expectedOutput()[i], result)
         }
